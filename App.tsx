@@ -1,20 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { LinearGradient } from "expo-linear-gradient";
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { Home } from "./src/screens/Home";
+import { Login } from "./src/screens/Login";
+import { THEME } from "./src/theme/theme";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <LinearGradient style={{ flex: 1 }} colors={THEME.COLORS.GRADIENT}>
+      <SafeAreaView style={styles.container}>
+        {/* <Login /> */}
+        <Home />
+        <StatusBar style="light" translucent />
+      </SafeAreaView>
+    </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    // backgroundColor: THEME.COLORS.GRADIENT,
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
