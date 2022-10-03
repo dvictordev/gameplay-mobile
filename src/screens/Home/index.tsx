@@ -10,6 +10,7 @@ const userId = "db690068-f68a-494a-befd-c26492c553d6";
 
 export function Home() {
   const [matchs, setMatchs] = useState<matchProps[]>([]);
+
   useEffect(() => {
     fetch(`http://192.168.1.3:3333/user/${userId}/matchs`)
       .then((res) => res.json())

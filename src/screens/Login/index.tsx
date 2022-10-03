@@ -1,5 +1,6 @@
 import { LinearGradient } from "expo-linear-gradient";
 import { View, Image, Text, Touchable, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 import { THEME } from "../../theme/theme";
 import discordLogo from "../../assets/discord.png";
@@ -7,7 +8,11 @@ import IllustrationImg from "../../assets/illustration.png";
 
 import { styles } from "./styles";
 
-export function Login() {
+export function Login({ navigation }) {
+  function handleSignIn() {
+    navigation.navigate("Home");
+  }
+
   return (
     <LinearGradient style={styles.container} colors={THEME.COLORS.GRADIENT}>
       <Image source={IllustrationImg} style={styles.illustration} />
@@ -18,7 +23,11 @@ export function Login() {
         </Text>
       </View>
 
-      <TouchableOpacity activeOpacity={0.6} style={styles.loginButton}>
+      <TouchableOpacity
+        activeOpacity={0.6}
+        style={styles.loginButton}
+        onPress={handleSignIn}
+      >
         <View style={styles.discord}>
           <Image source={discordLogo} />
         </View>
