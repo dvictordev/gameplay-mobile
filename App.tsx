@@ -12,7 +12,7 @@ export default function App() {
     <LinearGradient style={{ flex: 1 }} colors={THEME.COLORS.GRADIENT}>
       <SafeAreaView style={styles.container}>
         <Routes />
-        <StatusBar style="light" translucent />
+        <StatusBar style="light" translucent backgroundColor="#0E1647" />
       </SafeAreaView>
     </LinearGradient>
   );

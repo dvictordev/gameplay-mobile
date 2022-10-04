@@ -6,6 +6,7 @@ export const THEME={
         HEADING:'#DDE3F0',
         SUBTITLE:'#ABB1CC',
         SHAPE:"#171F52",
-        GRADIENT: ['#0E1647', '#0A1033']
+        GRADIENT: ['#0E1647', '#0A1033'],
+        HEADERGRADIENT:[ '#1D2766', '#171F52']
     },
 }

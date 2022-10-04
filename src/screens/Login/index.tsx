@@ -1,6 +1,5 @@
 import { LinearGradient } from "expo-linear-gradient";
 import { View, Image, Text, Touchable, TouchableOpacity } from "react-native";
-import { useNavigation } from "@react-navigation/native";
 
 import { THEME } from "../../theme/theme";
 import discordLogo from "../../assets/discord.png";
